@@ -43,7 +43,7 @@ public class Coloracion {
      * @param rutaIngresada Ruta del archivo .col
      */
     private void leeArchivo(String rutaIngresada) {
-        try (BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\aldoe\\Downloads\\CE_Tarea03\\src\\output\\graficas\\" + rutaIngresada + ".col"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("src/output/graficas/" + rutaIngresada + ".col"))) {
             String linea;
 
             while ((linea = br.readLine()) != null) {
@@ -86,7 +86,7 @@ public class Coloracion {
     private void escribeSolucion(int[] solucion, int iteraciones, int tolerancia) {
         // El nombre del archivo de salida es la ruta del archivo de entrada con un
         // identificador "_solucion" al final.
-        String nombreArchivoSalida = "C:\\Users\\aldoe\\Downloads\\CE_Tarea03\\src\\output\\graficas\\" + getRuta() + "_solucion.col";
+        String nombreArchivoSalida = "src/output/graficas/" + getRuta() + "_solucion.col";
 
         try (PrintWriter writer = new PrintWriter(new FileWriter(nombreArchivoSalida))){
             int[] solucionRandom = solucionAleatoria();
